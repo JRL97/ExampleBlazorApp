@@ -11,9 +11,9 @@ namespace ExampleBlazorApp.Models
         public string Name { get; set; } = String.Empty;
 
         [StringLength(255)]
-        public string Description { get; set; } = String.Empty;
+        public string? Description { get; set; } = null;
 
-        [Range(0, 10000.00)]
+        [Range(0, 50000.00)]
         public decimal Price { get; set; } = 0; 
 
     }
