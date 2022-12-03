@@ -1,23 +1,22 @@
-﻿@* UI Section *@
+﻿@inject CartService CartService
 
+ <div class="card w=50">
+     <div class="card-header">
+         New Cars
+     </div>
+     <div class="card-body">
+         <h5 class="card-title">Car @product.Id: @product.Name</h5>
+         <p class="card-text">@product.Description</p>
+         <blockquote class="card-text"><strong>£@product.Price</strong></blockquote>
+         
+         @if(DisplayBuyButton)
+         {
+             <button class="btn btn-primary" type="button" 
+                @onclick="()=> Buy(product.Id)">Buy</button>
+         }
 
-    <div class="card w=50">
-        <div class="card-header">
-            New Cars
-        </div>
-        <div class="card-body">
-
-            <h5 class="card-title">Car @product.Id: @product.Name</h5>
-            <p class="card-text">@product.Description</p>
-            <blockquote class="card-text"><strong>£@product.Price</strong></blockquote>
-
-            @if(DisplayBuyButton)
-            {
-                <a href="#" class="btn btn-primary">Buy</a>
-            }
-
-        </div>
-    </div>
+     </div>
+</div>
     
 @code 
 {
@@ -26,4 +25,9 @@
 
     [Parameter]
     public bool DisplayBuyButton { get; set; } = true;
+
+    private void Buy(int productId)
+    {
+        CartService.AddProductToCart(productId);
+    }
 }
