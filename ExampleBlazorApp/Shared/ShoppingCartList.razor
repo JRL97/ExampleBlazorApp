@@ -51,7 +51,7 @@
 
     public void OnQuantityChanged()
     {
-        totalCost = Items.Sum(item => item.PurchasePrice * item.Quantity);
+        totalCost = @Items.Sum(item => item.PurchasePrice * item.Quantity);
     }
 }
 
