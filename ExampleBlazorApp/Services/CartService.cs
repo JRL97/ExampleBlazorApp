@@ -27,7 +27,7 @@ namespace ExampleBlazorApp.Services
             {
                 if(item.Product.Id == productId)
                 {
-                    item.Quanitity++;
+                    item.Quantity++;
                     return true;
                 }
             }
