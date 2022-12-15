@@ -1,0 +1,17 @@
+﻿@* UI Section *@
+
+<h3>Product List</h3>
+<h4>by Jessica Leach</h4>
+
+@foreach(Car item in Cars)
+{
+    <CarView car="item"></CarView>
+}
+
+@* Code Section *@
+@code 
+{
+    [EditorRequired]
+    [Parameter]
+    public List<Car> Cars { get; set; } = CarService.Cars.ToList();
+}

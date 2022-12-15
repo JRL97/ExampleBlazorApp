@@ -1,18 +1,18 @@
-﻿@inject CartService CartService
+﻿@inject BasketService BasketService
 
  <div class="card w=50">
      <div class="card-header">
          New Cars
      </div>
      <div class="card-body">
-         <h5 class="card-title">Car @product.Id: @product.Name</h5>
-         <p class="card-text">@product.Description</p>
-         <blockquote class="card-text"><strong>£@product.Price</strong></blockquote>
+         <h5 class="card-title">Car @car.Id: @car.Name</h5>
+         <p class="card-text">@car.Description</p>
+         <blockquote class="card-text"><strong>£@car.Price</strong></blockquote>
          
          @if(DisplayBuyButton)
          {
              <button class="btn btn-primary" type="button" 
-                @onclick="()=> Buy(product.Id)">Buy</button>
+                @onclick="()=> Buy(car.Id)">Buy</button>
          }
 
      </div>
@@ -21,13 +21,13 @@
 @code 
 {
     [Parameter]
-    public Product product { get; set; } = new Product();
+    public Car car { get; set; } = new Car();
 
     [Parameter]
     public bool DisplayBuyButton { get; set; } = true;
 
     private void Buy(int productId)
     {
-        CartService.AddProductToCart(productId);
+        BasketService.AddProductToCart(productId);
     }
 }

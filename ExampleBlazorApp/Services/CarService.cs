@@ -3,9 +3,9 @@ using System.Collections.Immutable;
 
 namespace ExampleBlazorApp.Services
 {
-    public class ProductService
+    public class CarService
     {
-        public static readonly List<Product> Products = new List<Product>()
+        public static readonly List<Car> Cars = new List<Car>()
         {
             new()
             {

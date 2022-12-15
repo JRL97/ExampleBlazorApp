@@ -42,7 +42,7 @@
 
     [EditorRequired]
     [Parameter]
-    public List<ShoppingItem> Items { get; set; } = CartService.SelectedItems.ToList();
+    public List<ShoppingItem> Items { get; set; } = BasketService.SelectedItems.ToList();
 
     protected override void OnInitialized()
     {

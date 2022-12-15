@@ -6,7 +6,7 @@ namespace ExampleBlazorApp.Models
     {
         public int Id { get; set; } 
 
-        public Product Product { get; set; }
+        public Car Product { get; set; }
 
         [Range(1,9)]
         public int Quantity { get; set; } = 1;

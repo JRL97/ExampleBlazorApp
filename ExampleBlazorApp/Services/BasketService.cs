@@ -2,7 +2,7 @@
 
 namespace ExampleBlazorApp.Services
 {
-    public class CartService
+    public class BasketService
     {
         public static List<ShoppingItem> SelectedItems { get; set; } = new List<ShoppingItem>();
 
@@ -10,7 +10,7 @@ namespace ExampleBlazorApp.Services
         {
             if(ProductInCart(productId) is false)
             {
-                var product = ProductService.Products.First(p => p.Id == productId);
+                var product = CarService.Cars.First(p => p.Id == productId);
 
                 ShoppingItem item = new ShoppingItem();
 
