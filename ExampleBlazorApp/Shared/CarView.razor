@@ -7,7 +7,9 @@
      <div class="card-body">
          <h5 class="card-title">Car @car.Id: @car.Name</h5>
          <p class="card-text">@car.Description</p>
-         <blockquote class="card-text"><strong>£@car.Price</strong></blockquote>
+        <p class="card-text">@car.Variation.Colour</p>
+        <p class="card-text">@car.Variation.EngineSize</p>
+         <blockquote class="card-text"><strong>£@car.Variation.Price</strong></blockquote>
          
          @if(DisplayBuyButton)
          {

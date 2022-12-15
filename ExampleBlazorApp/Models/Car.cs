@@ -13,8 +13,6 @@ namespace ExampleBlazorApp.Models
         [StringLength(255)]
         public string? Description { get; set; } = null;
 
-        [Range(0, 50000.00)]
-        public decimal Price { get; set; } = 0; 
-
+        public CarVariation Variation { get; set; } = null;
     }
 }
