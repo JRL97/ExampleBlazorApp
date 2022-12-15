@@ -14,5 +14,7 @@ namespace ExampleBlazorApp.Models
         public string? Description { get; set; } = null;
 
         public CarVariation Variation { get; set; } = null;
+
+        public List<CarImage> Images { get; set;  }
     }
 }

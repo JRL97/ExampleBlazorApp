@@ -9,6 +9,8 @@ namespace ExampleBlazorApp.Services
         public static CarVariation Audi1 = new CarVariation("Black", 1400, 28585);
         public static CarVariation Lexus1 = new CarVariation("Green", 2200, 34750);
 
+        public static CarImage FiestaImage = new CarImage(1, "Fiesta1.PNG", 1);
+
         public static readonly List<Car> Cars = new List<Car>()
         {
             new()
@@ -16,7 +18,7 @@ namespace ExampleBlazorApp.Services
                 Id = 1,
                 Name = "Ford Fiesta",
                 Description = "The new Ford Fiesta available with Hybrid Technology",
-                Variation = Fiesta
+                Variation = Fiesta, 
             },
             new()
             {
