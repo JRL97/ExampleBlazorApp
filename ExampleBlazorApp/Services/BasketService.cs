@@ -15,7 +15,7 @@ namespace ExampleBlazorApp.Services
                 ShoppingItem item = new ShoppingItem();
 
                 item.Product = product;
-                item.PurchasePrice = product.Variation.Price;
+                item.PurchasePrice = product.Price;
 
                 SelectedItems.Add(item);
             }

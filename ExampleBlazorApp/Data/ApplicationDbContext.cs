@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ExampleBlazorApp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExampleBlazorApp.Data
@@ -9,5 +10,8 @@ namespace ExampleBlazorApp.Data
             : base(options)
         {
         }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<CarImage> CarImages { get; set; }
+        //public DbSet<CarVariation> CarVariations { get; set; }   
     }
 }

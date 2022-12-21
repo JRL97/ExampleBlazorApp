@@ -9,5 +9,12 @@
         public int ImageView { get; set; } = 1;
 
         public virtual Car Car { get; set; } 
+
+        //public CarImage(int carId, string url, int imageView) 
+        //{
+        //    CarId = carId;
+        //    URL = url;
+        //    ImageView = imageView;
+        //}
     }
 }

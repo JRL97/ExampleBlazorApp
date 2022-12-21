@@ -8,13 +8,26 @@ namespace ExampleBlazorApp.Models
         public int Id { get; set; } = 0;
 
         [StringLength(60), Required]
+        public string Make { get; set; }
+
+        [StringLength(60), Required]
+        public string Model { get; set; }
+
+        [StringLength(60), Required]
         public string Name { get; set; } = String.Empty;
 
-        [StringLength(255)]
-        public string? Description { get; set; } = null;
+        [StringLength(60), Required]
+        public string Colour { get; set; } = "Blue";
 
-        public CarVariation Variation { get; set; } = null;
+        //The enginer size is in cc's
+        [Range(1000, 3000)]
+        public int EngineSize { get; set; } = 1000;
 
-        public List<CarImage> Images { get; set;  }
+        [Range(5000, 50000.00)]
+        public decimal Price { get; set; } = 18495;
+
+        //public CarVariation? Variation { get; set; } = null;
+
+        public List<CarImage> Images { get; set; } = new List<CarImage>();
     }
 }

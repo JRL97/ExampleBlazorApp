@@ -8,6 +8,9 @@ namespace ExampleBlazorApp.Models
         public int Id { get; set; } = 0;
 
         [StringLength(60), Required]
+        public string Name { get; set; } = String.Empty;
+
+        [StringLength(60), Required]
         public string Colour { get; set; } = "Blue";
 
         //The enginer size is in cc's
@@ -16,6 +19,7 @@ namespace ExampleBlazorApp.Models
 
         [Range(5000, 50000.00)]
         public decimal Price { get; set; } = 18495;
+
 
         public CarVariation(string colour, int engineSize, decimal price)
         {
