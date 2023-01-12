@@ -1,4 +1,5 @@
 using ExampleBlazorApp.Areas.Identity;
+using ExampleBlazorApp.Controllers;
 using ExampleBlazorApp.Data;
 using ExampleBlazorApp.Services;
 using Microsoft.AspNetCore.Components;
@@ -22,6 +23,7 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 
 builder.Services.AddScoped<BasketService>();
+builder.Services.AddScoped<CarsController>();
 
 var app = builder.Build();
 

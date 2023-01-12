@@ -1,4 +1,5 @@
-﻿@* UI Section *@
+﻿@inject CarsController controller;
+@* UI Section *@
 
 <h3>Product List</h3>
 <h4>by Jessica Leach</h4>
@@ -13,5 +14,9 @@
 {
     [EditorRequired]
     [Parameter]
-    public List<Car> Cars { get; set; } = CarService.Cars.ToList();
+    public List<Car> Cars { get; set; }
+    protected override void OnInitializedAsync()
+    {
+        await Cars = controller.GetCars();
+    }
 }

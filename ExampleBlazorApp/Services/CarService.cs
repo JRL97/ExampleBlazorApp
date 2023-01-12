@@ -7,6 +7,12 @@ namespace ExampleBlazorApp.Services
     { 
         //public static CarImage FiestaImage = new CarImage(1, "Fiesta1.PNG", 1);
 
+        public List<Car> getCars() 
+        {
+            var cars = new List<Car>();
+            return new List<Car>();
+        }
+
         public static readonly List<Car> Cars = new List<Car>();
         //{
         //    new()
