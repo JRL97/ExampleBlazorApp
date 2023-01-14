@@ -1,4 +1,5 @@
 ﻿using ExampleBlazorApp.Models;
+using ExampleBlazorApp.Services;
 
 namespace ExampleBlazorApp.Services
 {

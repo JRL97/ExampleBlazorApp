@@ -24,6 +24,7 @@ builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuth
 
 builder.Services.AddScoped<BasketService>();
 builder.Services.AddScoped<CarsController>();
+builder.Services.AddScoped<CarService>();
 
 var app = builder.Build();
 

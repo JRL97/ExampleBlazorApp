@@ -1,22 +1,25 @@
-﻿@inject CarsController controller;
+﻿@inject CarService Data
+
 @* UI Section *@
 
 <h3>Product List</h3>
-<h4>by Jessica Leach</h4>
 
-@foreach(Car item in Cars)
+@foreach(Car item in Products)
 {
-    <CarView car="item"></CarView>
+    <CarView product="item"></CarView>
 }
 
 @* Code Section *@
 @code 
 {
+
     [EditorRequired]
     [Parameter]
-    public List<Car> Cars { get; set; }
-    protected override void OnInitializedAsync()
+    public List<Car> Products { get; set; }
+
+    protected override void OnInitialized()
     {
-        await Cars = controller.GetCars();
+        base.OnInitialized();
+        Products = CarService.GetProducts();
     }
 }

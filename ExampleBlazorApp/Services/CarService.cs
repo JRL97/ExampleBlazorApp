@@ -1,19 +1,19 @@
-﻿using ExampleBlazorApp.Models;
+﻿using ExampleBlazorApp.Data;
+using ExampleBlazorApp.Models;
 using System.Collections.Immutable;
 
 namespace ExampleBlazorApp.Services
 {
     public class CarService
-    { 
-        //public static CarImage FiestaImage = new CarImage(1, "Fiesta1.PNG", 1);
+    {
+        private static ApplicationDbContext _context;
 
-        public List<Car> getCars() 
+        public CarService(ApplicationDbContext db)
         {
-            var cars = new List<Car>();
-            return new List<Car>();
+            _context = db;
         }
 
-        public static readonly List<Car> Cars = new List<Car>();
+        //public static readonly List<Car> Cars = new List<Car>();
         //{
         //    new()
         //    {
@@ -37,5 +37,10 @@ namespace ExampleBlazorApp.Services
         //        Variation= Lexus1
         //    }
         //};
+        public static List<Car> GetProducts()
+        {
+            return _context.Cars.ToList();
+        }
+
     }
 }
