@@ -43,5 +43,15 @@ namespace ExampleBlazorApp.Services
             return _context.Cars.ToList();
         }
 
+        public static Car GetCar(int id)
+        {
+            return _context.Cars.Find(id);
+        }
+
+        // Other CRUD Operations
+
+        // public void DeleteCar(int id);
+        // public void AddCar(Car car);
+        // public void UpdateCar(int id, Car car);
     }
 }

@@ -11,7 +11,7 @@ namespace ExampleBlazorApp.Services
         {
             if(ProductInCart(productId) is false)
             {
-                var product = CarService.Cars.First(p => p.Id == productId);
+                var product = CarService.GetCar( productId);
 
                 ShoppingItem item = new ShoppingItem();
 
