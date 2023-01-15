@@ -4,9 +4,9 @@ namespace ExampleBlazorApp.Data
 {
     public static class DataSeeding
     {
-        public static CarVariation Fiesta = new CarVariation("Blue", 1200, 18495);
-        public static CarVariation Audi1 = new CarVariation("Black", 1400, 28585);
-        public static CarVariation Lexus1 = new CarVariation("Green", 2200, 34750);
+        //public static CarVariation Fiesta = new CarVariation("Blue", 1200, 18495);
+        //public static CarVariation Audi1 = new CarVariation("Black", 1400, 28585);
+        //public static CarVariation Lexus1 = new CarVariation("Green", 2200, 34750);
         public static void Initialise(ApplicationDbContext db)
         {
             SeedCars(db);
