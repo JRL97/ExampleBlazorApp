@@ -1,5 +1,6 @@
 ﻿using ExampleBlazorApp.Models;
-
+using System;
+using System.Security.Policy;
 namespace ExampleBlazorApp.Data
 {
     public static class DataSeeding
@@ -14,9 +15,67 @@ namespace ExampleBlazorApp.Data
         }
         private static void SeedImages(ApplicationDbContext db)
         {
-            //throw new NotImplementedException();
-        }
+            if (db.CarImages.Any())
+            {
+                return;
+            }
+            var carimages = new CarImage[]
+        {
+            new()
+            {
+                CarId = 1,
+                URL = "Eco1000Image1.jpg",
+             },
+            new()
+            {
+                CarId = 2,
+                URL = "Eco1000Image1.jpg",
+            },
+            new()
+            {
+                 CarId = 3,
+                 URL = "Eco1000Image1.jpg",
+            },
+               new()
+            {
+                CarId = 4,
+                URL = "Eco1000Image1.jpg",
+             },
+            new()
+            {
+                CarId = 5,
+                URL = "Eco1000Image1.jpg",
+            },
+            new()
+            {
+                 CarId = 6,
+                 URL = "Eco1000Image1.jpg",
+            },
+               new()
+            {
+                CarId = 7,
+                URL = "Eco1000Image1.jpg",
+             },
+            new()
+            {
+                CarId = 8,
+                URL = "Eco1000Image1.jpg",
+            },
+            new()
+            {
+                 CarId = 9,
+                 URL = "Eco1000Image1.jpg",
+            },
+             new()
+            {
+                 CarId = 10,
+                 URL = "Eco1000Image1.jpg",
+            },
 
+        };
+            db.CarImages.AddRange(carimages);
+            db.SaveChanges();
+        }
         private static void SeedCars(ApplicationDbContext db)
         {
             if (db.Cars.Any())
