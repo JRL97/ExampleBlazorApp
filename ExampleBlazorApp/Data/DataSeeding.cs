@@ -20,59 +20,60 @@ namespace ExampleBlazorApp.Data
                 return;
             }
             var carimages = new CarImage[]
-        {
-            new()
             {
-                CarId = 1,
-                URL = "Eco1000Image1.jpg",
-             },
-            new()
-            {
-                CarId = 2,
-                URL = "Eco1000Image1.jpg",
-            },
-            new()
-            {
-                 CarId = 3,
-                 URL = "Eco1000Image1.jpg",
-            },
-               new()
-            {
-                CarId = 4,
-                URL = "Eco1000Image1.jpg",
-             },
-            new()
-            {
-                CarId = 5,
-                URL = "Eco1000Image1.jpg",
-            },
-            new()
-            {
-                 CarId = 6,
-                 URL = "Eco1000Image1.jpg",
-            },
-               new()
-            {
-                CarId = 7,
-                URL = "Eco1000Image1.jpg",
-             },
-            new()
-            {
-                CarId = 8,
-                URL = "Eco1000Image1.jpg",
-            },
-            new()
-            {
-                 CarId = 9,
-                 URL = "Eco1000Image1.jpg",
-            },
-             new()
-            {
-                 CarId = 10,
-                 URL = "Eco1000Image1.jpg",
-            },
+                new()
+                {
+                    CarId = 1,
+                    URL = "Eco1000Image1.jpg",
+                 },
+                new()
+                {
+                    CarId = 2,
+                    URL = "Eco1000Image1.jpg",
+                },
+                new()
+                {
+                     CarId = 3,
+                     URL = "Eco1000Image1.jpg",
+                },
+                   new()
+                {
+                    CarId = 4,
+                    URL = "Eco1000Image1.jpg",
+                 },
+                new()
+                {
+                    CarId = 5,
+                    URL = "Eco1000Image1.jpg",
+                },
+                new()
+                {
+                     CarId = 6,
+                     URL = "Eco1000Image1.jpg",
+                },
+                   new()
+                {
+                    CarId = 7,
+                    URL = "Eco1000Image1.jpg",
+                 },
+                new()
+                {
+                    CarId = 8,
+                    URL = "Eco1000Image1.jpg",
+                },
+                new()
+                {
+                     CarId = 9,
+                     URL = "Eco1000Image1.jpg",
+                },
+                 new()
+                {
+                     CarId = 10,
+                     URL = "Eco1000Image1.jpg",
+                },
 
-        };
+            };
+            
             db.CarImages.AddRange(carimages);
             db.SaveChanges();
         }

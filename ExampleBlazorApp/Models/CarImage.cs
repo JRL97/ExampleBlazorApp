@@ -1,15 +1,17 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 namespace ExampleBlazorApp.Models
 {
     public class CarImage
     {
-        public int Id { get; set; } = 0;
+        public int Id { get; set; }
         public int CarId { get; set; }
+        
+        [Required, StringLength(120)]
         public string URL { get; set; } = string.Empty;
 
-
-        //public int ImageView { get; set; } = 1;
+        public int ImageView { get; set; }
 
         public virtual Car Car { get; set; }
 
