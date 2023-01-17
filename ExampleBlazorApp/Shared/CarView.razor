@@ -6,6 +6,7 @@
      </div> @*ToDo:Add new attributes*@
      <div class="card-body">
          <h5 class="card-title">Car @car.Id: @car.Name</h5>
+         <img src="images/@car.Images.FirstOrDefault().URL" alt="Car Image" />
          <p class="card-text">@car.Make</p>
         <p class="card-text">@car.Model</p>
         <p class="card-text">@car.Colour</p>

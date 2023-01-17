@@ -1,5 +1,6 @@
 ﻿using ExampleBlazorApp.Data;
 using ExampleBlazorApp.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Immutable;
 
 
@@ -40,7 +41,7 @@ namespace ExampleBlazorApp.Services
         //};
         public static List<Car> GetProducts()
         {
-            return _context.Cars.ToList();
+            return _context.Cars.Include(c => c.Images).ToList();
         }
 
         public static Car GetCar(int id)
