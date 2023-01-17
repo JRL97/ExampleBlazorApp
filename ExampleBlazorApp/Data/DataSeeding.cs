@@ -29,47 +29,47 @@ namespace ExampleBlazorApp.Data
                 new()
                 {
                     CarId = 2,
-                    URL = "Eco1000Image1.jpg",
+                    URL = "Eco1000Image2.jpg",
                 },
                 new()
                 {
                      CarId = 3,
-                     URL = "Eco1000Image1.jpg",
+                     URL = "Eco1000Image3.jpg",
                 },
                    new()
                 {
                     CarId = 4,
-                    URL = "Eco1000Image1.jpg",
+                    URL = "HybridImage1.jpg",
                  },
                 new()
                 {
                     CarId = 5,
-                    URL = "Eco1000Image1.jpg",
+                    URL = "HybridImage2.jpg",
                 },
                 new()
                 {
                      CarId = 6,
-                     URL = "Eco1000Image1.jpg",
+                     URL = "HybridImage3.jpg",
                 },
                    new()
                 {
                     CarId = 7,
-                    URL = "Eco1000Image1.jpg",
+                    URL = "Eco1500Image1.jpg",
                  },
                 new()
                 {
                     CarId = 8,
-                    URL = "Eco1000Image1.jpg",
+                    URL = "Eco1500Image2.jpg",
                 },
                 new()
                 {
                      CarId = 9,
-                     URL = "Eco1000Image1.jpg",
+                     URL = "Eco1500Image3.jpg",
                 },
                  new()
                 {
                      CarId = 10,
-                     URL = "Eco1000Image1.jpg",
+                     URL = "Eco1000Image4.jpg",
                 },
 
             };
