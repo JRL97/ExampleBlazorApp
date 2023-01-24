@@ -1,7 +1,7 @@
 ﻿
 <h4>by Jessica Leach</h4>
 
-<h5>You Have @Items.Count Items In Your Cart</h5>
+<h5>You Have @numberofItems Items In Your Cart</h5>
 
 <br/>
 <div class="col-8">
@@ -37,7 +37,8 @@
 @* Code Section *@
 @code
 {
-    private Decimal totalCost { get; set; }
+    private decimal totalCost { get; set; }
+    private int numberofItems { get; set; }
 
     [EditorRequired]
     [Parameter]
@@ -51,6 +52,7 @@
     public void OnQuantityChanged()
     {
         totalCost = @Items.Sum(item => item.PurchasePrice * item.Quantity);
+        numberofItems = Items.Sum(item => item.Quantity);
     }
 }
 
